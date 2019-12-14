@@ -15,10 +15,6 @@ export interface ComponentManagerArgs {
   positional: any[];
 }
 
-interface Constructor<T> {
-  new (owner: unknown, args: {}): T;
-}
-
 export default class ComponentManager<Component extends BaseComponent> {
   capabilities = capabilities('3.13', {
     destructor: true,
