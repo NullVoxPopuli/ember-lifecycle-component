@@ -64,6 +64,8 @@
     "loader.js": "^4.7.0",
     "prettier": "^1.19.1",
     "qunit-dom": "^0.9.0",
+    "release-it": "^12.4.3",
+    "release-it-lerna-changelog": "^1.0.3",
     "typescript": "^3.7.3"
   },
   "engines": {
@@ -71,5 +73,28 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md"
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true
+    }
+  },
+  "changelog": {
+    "repo": "NullVoxPopuli/ember-lifecycle-component",
+    "labels": {
+      "breaking": ":boom: Breaking Change",
+      "enhancement": ":rocket: Enhancement",
+      "bug": ":bug: Bug Fix",
+      "documentation": ":memo: Documentation",
+      "internal": ":house: Internal"
+    }
   }
 }
