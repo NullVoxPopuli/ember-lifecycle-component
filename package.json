@@ -17,6 +17,7 @@
     "build": "ember build",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
+    "lint:types": "yarn tsc --noEmit --skipLibCheck",
     "start": "ember serve",
     "test": "ember test",
     "test:try-one": "ember try:one",

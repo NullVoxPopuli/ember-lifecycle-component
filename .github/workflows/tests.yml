@@ -18,8 +18,8 @@ jobs:
       run: yarn install
     - name: ESLint
       run: yarn lint:js
-    # - name: Types
-    #   run: yarn tsc --noEmit
+    - name: Types
+      run: yarn lint:types
 
   tests_floating:
     name: Floating
