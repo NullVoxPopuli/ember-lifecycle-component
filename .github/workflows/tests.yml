@@ -34,23 +34,23 @@ jobs:
     - name: Test
       run: yarn test
 
-  tests_lts_releases:
-    name: LTS & Releases
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        scenario:
-        - "ember-3.13"
-        - "ember-release"
-        - "ember-beta"
-        - "ember-canary"
-    steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-    - name: Install
-      run: yarn install
-    - name: Test with ${{ matrix.scenario }}
-      run: yarn test:try-one ${{ matrix.scenario }}
+  # tests_lts_releases:
+  #   name: LTS & Releases
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     matrix:
+  #       scenario:
+  #       - "ember-3.13"
+  #       - "ember-release"
+  #       - "ember-beta"
+  #       - "ember-canary"
+  #   steps:
+  #   - uses: actions/checkout@v1
+  #   - uses: actions/setup-node@v1
+  #     with:
+  #       node-version: '12.x'
+  #   - name: Install
+  #     run: yarn install
+  #   - name: Test with ${{ matrix.scenario }}
+  #     run: yarn test:try-one ${{ matrix.scenario }}
 
