@@ -1,13 +1,14 @@
 {
   "name": "ember-lifecycle-component",
   "version": "0.6.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "A component with additional lifecycles for times when you may need need a template.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "component-manager"
   ],
-  "repository": "",
+  "repository": "https://github.com/NullVoxPopuli/ember-lifecycle-component",
   "license": "MIT",
-  "author": "",
+  "author": "NullVoxPopuli",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -98,5 +99,9 @@
       "documentation": ":memo: Documentation",
       "internal": ":house: Internal"
     }
+  },
+  "volta": {
+    "node": "12.13.1",
+    "yarn": "1.21.1"
   }
 }
