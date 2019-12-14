@@ -13,6 +13,7 @@
     "test": "tests"
   },
   "scripts": {
+    "release": "release-it -n",
     "build": "ember build",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
