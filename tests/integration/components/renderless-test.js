@@ -4,7 +4,7 @@ import { render, settled, clearRender } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
 import Service, { inject as service } from '@ember/service';
-import { RenderlessComponent } from 'ember-components-extra';
+import { LifeCycleComponent } from 'ember-components-extra';
 
 module('Integration | Component | renderless', function(hooks) {
   setupRenderingTest(hooks);
@@ -14,7 +14,7 @@ module('Integration | Component | renderless', function(hooks) {
 
     this.owner.register(
       'component:foo',
-      class Foo extends RenderlessComponent {
+      class Foo extends LifeCycleComponent {
         constructor() {
           super(...arguments);
 
@@ -51,7 +51,7 @@ module('Integration | Component | renderless', function(hooks) {
 
     this.owner.register(
       'component:foo',
-      class Foo extends RenderlessComponent {
+      class Foo extends LifeCycleComponent {
         @service bar;
 
         constructor() {
