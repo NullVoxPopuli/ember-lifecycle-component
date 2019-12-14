@@ -40,7 +40,7 @@ jobs:
     strategy:
       matrix:
         scenario:
-        - "ember-lts-3.12"
+        - "ember-3.13"
         - "ember-release"
         - "ember-beta"
         - "ember-canary"
