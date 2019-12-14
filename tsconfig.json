@@ -28,16 +28,16 @@
         "tests/dummy/app/*",
         "app/*"
       ],
-      "ember-components-extra": [
+      "ember-lifecycle-component": [
         "addon"
       ],
-      "ember-components-extra/*": [
+      "ember-lifecycle-component/*": [
         "addon/*"
       ],
-      "ember-components-extra/test-support": [
+      "ember-lifecycle-component/test-support": [
         "addon-test-support"
       ],
-      "ember-components-extra/test-support/*": [
+      "ember-lifecycle-component/test-support/*": [
         "addon-test-support/*"
       ],
       "*": [

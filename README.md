@@ -1,38 +1,77 @@
-ember-components-extra
-==============================================================================
+# ember-lifecycle-component
 
-[Short description of the addon.]
+For situations where you don't need a template.
+- WebGL Integration
+- Other DOM-less situations
 
+The `LifeCycleComponent` has the same interface as `@glimmer/component`, but with some additional hooks.
 
-Compatibility
-------------------------------------------------------------------------------
+All the hooks available for use are:
 
-* Ember.js v3.4 or above
-* Ember CLI v2.13 or above
-* Node.js v8 or above
+- constructor
+- willUpdate
+- didUpdate
+- willDestroy
 
-
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```
-ember install ember-components-extra
+ember install ember-lifecycle-component
 ```
 
 
-Usage
-------------------------------------------------------------------------------
+## Usage
 
-[Longer description of how to use the addon in apps.]
+```ts
+import { LifeCycleComponent } from 'ember-lifecycle-component';
+
+import THREE from 'three';
+
+let geometry = new THREE.BoxGeometry( 2, 2, 2 );
+let material = new THREE.MeshNormalMaterial();
+
+export default class SceneBoxComponent extends Component {
+  constructor(owner, args) {
+    super(owner, args);
+
+    this.mesh = new THREE.Mesh(geometry, material);
+
+    let { rx, ry, rz } = this.args;
+
+    this.#updateRotation(rx, ry, rz);
+    this.mesh.position.set(0, 0, 0);
+
+    args.scene.add(this.mesh);
+  }
+
+  didUpdate() {
+    let { rx, ry, rz } = this.args;
+    this.#updateRotation({ rx, ry, rz });
+  }
+
+  willDestroy() {
+    this.args.scene.remove(this.mesh);
+  }
+
+  #updateRotation({ rx, ry, rz }) {
+    this.mesh.rotation.set(rx, ry, rz);
+  }
+}
+```
 
 
-Contributing
-------------------------------------------------------------------------------
+
+## Compatibility
+
+* Ember v3.13 or above
+
+
+
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).

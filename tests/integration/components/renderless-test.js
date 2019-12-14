@@ -4,7 +4,7 @@ import { render, settled, clearRender } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
 import Service, { inject as service } from '@ember/service';
-import { LifeCycleComponent } from 'ember-components-extra';
+import { LifeCycleComponent } from 'ember-lifecycle-component';
 
 module('Integration | Component | renderless', function(hooks) {
   setupRenderingTest(hooks);

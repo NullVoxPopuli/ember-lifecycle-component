@@ -3,7 +3,7 @@
 ## Installation
 
 * `git clone <repository-url>`
-* `cd ember-components-extra`
+* `cd ember-lifecycle-component`
 * `npm install`
 
 ## Linting
