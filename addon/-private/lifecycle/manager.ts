@@ -3,7 +3,6 @@
 // https://github.com/rwjblue/sparkles-component/blob/master/addon/component-managers/sparkles.ts
 
 import Ember from 'ember';
-import { set } from '@ember/object';
 import { getOwner, setOwner } from '@ember/application';
 import { capabilities } from '@ember/component';
 import { schedule } from '@ember/runloop';
