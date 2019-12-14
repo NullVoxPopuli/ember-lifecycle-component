@@ -1,3 +1,5 @@
+* update package meta (02e97c4)
+
 * linting (db3eaeb)
 
 * rework the willUpdate tot didReceive (b2c2df8)
