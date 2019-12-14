@@ -8,10 +8,10 @@ The `LifeCycleComponent` has the same interface as `@glimmer/component`, but wit
 
 All the hooks available for use are:
 
-- constructor
-- willUpdate
-- didUpdate
-- willDestroy
+- constructor(owner, args)
+- didReceiveArgs(prev, next)
+- didUpdate()
+- willDestroy()
 
 ## Installation
 
@@ -21,6 +21,8 @@ ember install ember-lifecycle-component
 
 
 ## Usage
+
+[More examples here, in the tests](https://github.com/NullVoxPopuli/ember-lifecycle-component/blob/master/tests/integration/components/renderless-test.js)
 
 ```ts
 import { LifeCycleComponent } from 'ember-lifecycle-component';

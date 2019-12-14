@@ -10,7 +10,7 @@ module('Integration | Component | renderless', function(hooks) {
   setupRenderingTest(hooks);
 
   test('lifecycles', async function(assert) {
-    assert.expect(3);
+    assert.expect(7);
 
     this.owner.register(
       'component:foo',
@@ -20,9 +20,18 @@ module('Integration | Component | renderless', function(hooks) {
 
           assert.equal(this.args.foo, 2, 'constructor receives args');
         }
+
+        didReceiveArgs(previousArgs, nextArgs) {
+          assert.equal(previousArgs.foo, 2, 'previous args');
+          assert.equal(nextArgs.foo, 3, 'next args');
+          assert.equal(this.args.foo, 3, 'next args');
+          assert.equal(this.args, nextArgs, 'this args are nextArgs');
+        }
+
         didUpdate() {
           assert.equal(this.args.foo, 3, 'didUpdate');
         }
+
         willDestroy() {
           assert.ok(true, 'willDestroy');
         }

@@ -5,6 +5,7 @@ import { setOwner } from '@ember/application';
 
 const DESTROYING = new WeakMap<BaseComponent<unknown>, boolean>();
 const DESTROYED = new WeakMap<BaseComponent<unknown>, boolean>();
+export const PREVIOUS_ARGS = Symbol('PREVIOUS_ARGS');
 
 export function setDestroying(component: BaseComponent<unknown>) {
   DESTROYING.set(component, true);
@@ -15,6 +16,8 @@ export function setDestroyed(component: BaseComponent<unknown>) {
 
 export default class BaseComponent<T = object> {
   args: Readonly<T>;
+  // by the time this _can_ be read, it will have a value
+  [PREVIOUS_ARGS]: Readonly<T>;
 
   constructor(owner: unknown, args: T) {
     this.args = args;
@@ -29,7 +32,7 @@ export default class BaseComponent<T = object> {
    *
    * @param next args that _will_ be set
    */
-  willUpdate(_nextArgs: T) {}
+  didReceiveArgs(_previousArgs: T, _nextArgs: T) {}
 
   /**
    * Called after the component has received new args

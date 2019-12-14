@@ -8,7 +8,7 @@ import { getOwner, setOwner } from '@ember/application';
 import { capabilities } from '@ember/component';
 import { schedule } from '@ember/runloop';
 
-import BaseComponent, { setDestroyed, setDestroying } from './component';
+import BaseComponent, { setDestroyed, setDestroying, PREVIOUS_ARGS } from './component';
 
 export interface ComponentManagerArgs {
   named: object;
@@ -34,15 +34,16 @@ export default class ComponentManager<Component extends BaseComponent> {
   createComponent(Klass: Constructor<Component>, args: ComponentManagerArgs) {
     let instance = new Klass(getOwner(this), args.named);
 
+    instance[PREVIOUS_ARGS] = { ...args.named };
     return instance;
   }
 
   didCreateComponent(_component: Component) {}
 
   updateComponent(component: Component, args: ComponentManagerArgs) {
-    component.willUpdate(args.named);
+    component.didReceiveArgs(component[PREVIOUS_ARGS], args.named);
 
-    set(component, 'args', args.named);
+    component[PREVIOUS_ARGS] = { ...args.named };
   }
 
   didUpdateComponent(component: Component) {
@@ -73,7 +74,7 @@ function scheduledDestroyComponent(component: BaseComponent, meta: any) {
     return;
   }
 
-  ( Ember as any).destroy(component);
+  (Ember as any).destroy(component);
 
   meta.setSourceDestroyed();
   setDestroyed(component);
