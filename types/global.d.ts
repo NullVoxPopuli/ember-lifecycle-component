@@ -4,3 +4,4 @@ declare module 'ember-lifecycle-component/templates/*' {
   const tmpl: TemplateFactory;
   export default tmpl;
 }
+

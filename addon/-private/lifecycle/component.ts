@@ -3,8 +3,6 @@
 // https://github.com/rwjblue/sparkles-component/blob/master/addon/index.ts
 import { setOwner } from '@ember/application';
 
-type ComponentManagerArgs = import('./manager').ComponentManagerArgs;
-
 const DESTROYING = new WeakMap<BaseComponent<unknown>, boolean>();
 const DESTROYED = new WeakMap<BaseComponent<unknown>, boolean>();
 
@@ -31,7 +29,7 @@ export default class BaseComponent<T = object> {
    *
    * @param next args that _will_ be set
    */
-  willUpdate(_nextArgs: ComponentManagerArgs) {}
+  willUpdate(_nextArgs: T) {}
 
   /**
    * Called after the component has received new args
@@ -44,11 +42,11 @@ export default class BaseComponent<T = object> {
    */
   willDestroy() {}
 
-  get isDestroying() {
-    return DESTROYING.get(this);
+  get isDestroying(): boolean {
+    return Boolean(DESTROYING.get(this));
   }
 
-  get isDestroyed() {
-    return DESTROYED.get(this);
+  get isDestroyed(): boolean{
+    return Boolean(DESTROYED.get(this));
   }
 }

@@ -58,7 +58,7 @@ export default class ComponentManager<Component extends BaseComponent> {
       return;
     }
 
-    let meta = Ember.meta(component);
+    let meta = (Ember as any).meta(component);
 
     meta.setSourceDestroying();
     setDestroying(component);
@@ -72,12 +72,12 @@ export default class ComponentManager<Component extends BaseComponent> {
   }
 }
 
-function scheduledDestroyComponent(component: BaseComponent, meta) {
+function scheduledDestroyComponent(component: BaseComponent, meta: any) {
   if (component.isDestroyed) {
     return;
   }
 
-  Ember.destroy(component);
+  ( Ember as any).destroy(component);
 
   meta.setSourceDestroyed();
   setDestroyed(component);
