@@ -6,6 +6,8 @@ For situations where you don't need a template.
 
 The `LifeCycleComponent` has the same interface as `@glimmer/component`, but with some additional hooks.
 
+**Generally, you do not need this. Nearly all side-effecting code can be represented as computed/tracked properties and regular getters while causing changes via the functions that would have started the side-effect anyway**.
+
 All the hooks available for use are:
 
 - constructor(owner, args)
