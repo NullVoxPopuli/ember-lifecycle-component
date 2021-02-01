@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
@@ -26,6 +28,7 @@ module.exports = {
     // prettier
     'prettier/prettier': 'error',
   },
+  rules: {},
   overrides: [
     // tricky files
     {
@@ -39,6 +42,7 @@ module.exports = {
       files: [
         '.ember-cli.js',
         '.eslintrc.js',
+        '.prettierrc.js',
         '.template-lintrc.js',
         '.prettierrc.js',
         'ember-cli-build.js',
@@ -49,7 +53,12 @@ module.exports = {
         'tests/dummy/config/**/*.js',
         'tests/**/.ember-cli.js',
       ],
-      excludedFiles: ['addon/**', 'addon-test-support/**', 'app/**', 'tests/dummy/app/**'],
+      excludedFiles: [
+        'addon/**',
+        'addon-test-support/**',
+        'app/**',
+        'tests/dummy/app/**',
+      ],
       parserOptions: {
         sourceType: 'script',
       },
@@ -58,13 +67,14 @@ module.exports = {
         node: true,
       },
       plugins: ['node'],
-      rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
+      extends: ['plugin:node/recommended'],
+      rules: {
         // add your custom rules and overrides for node files here
 
         // specifically for testem...
         '@typescript-eslint/camelcase': 'off',
         '@typescript-eslint/no-var-requires': 'off',
-      }),
+      },
     },
   ],
 };
