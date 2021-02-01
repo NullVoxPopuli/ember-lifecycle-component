@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/NullVoxPopuli/ember-lifecycle-component/compare/v1.0.0...v1.0.1) (2021-02-01)
+
+
+### Bug Fixes
+
+* renovate update strategy: bump ([6e133f0](https://github.com/NullVoxPopuli/ember-lifecycle-component/commit/6e133f02bb7163f3529688fde5be26e0f45b1201))
+
 # [1.0.0](https://github.com/NullVoxPopuli/ember-lifecycle-component/compare/v0.7.0...v1.0.0) (2021-02-01)
 
 
