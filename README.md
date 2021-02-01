@@ -67,8 +67,7 @@ export default class SceneBoxComponent extends LifeCycleComponent {
 
 ## Compatibility
 
-* Ember v3.13 or above
-
+* See: config/ember-try.js
 
 
 ## Contributing

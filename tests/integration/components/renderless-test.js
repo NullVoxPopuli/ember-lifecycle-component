@@ -6,17 +6,17 @@ import { hbs } from 'ember-cli-htmlbars';
 import Service, { inject as service } from '@ember/service';
 import { LifeCycleComponent } from 'ember-lifecycle-component';
 
-module('Integration | Component | renderless', function(hooks) {
+module('Integration | Component | renderless', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('lifecycles', async function(assert) {
+  test('lifecycles', async function (assert) {
     assert.expect(7);
 
     this.owner.register(
       'component:foo',
       class Foo extends LifeCycleComponent {
-        constructor() {
-          super(...arguments);
+        constructor(...args) {
+          super(...args);
 
           assert.equal(this.args.foo, 2, 'constructor receives args');
         }
@@ -48,7 +48,7 @@ module('Integration | Component | renderless', function(hooks) {
     await clearRender();
   });
 
-  test('injection', async function(assert) {
+  test('injection', async function (assert) {
     assert.expect(1);
 
     this.owner.register(
@@ -63,8 +63,8 @@ module('Integration | Component | renderless', function(hooks) {
       class Foo extends LifeCycleComponent {
         @service bar;
 
-        constructor() {
-          super(...arguments);
+        constructor(...args) {
+          super(...args);
 
           assert.equal(this.bar.bar, 2, 'Service value accessible');
         }
