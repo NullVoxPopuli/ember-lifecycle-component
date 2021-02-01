@@ -28,7 +28,6 @@ module.exports = {
     // prettier
     'prettier/prettier': 'error',
   },
-  rules: {},
   overrides: [
     // tricky files
     {
@@ -53,12 +52,7 @@ module.exports = {
         'tests/dummy/config/**/*.js',
         'tests/**/.ember-cli.js',
       ],
-      excludedFiles: [
-        'addon/**',
-        'addon-test-support/**',
-        'app/**',
-        'tests/dummy/app/**',
-      ],
+      excludedFiles: ['addon/**', 'addon-test-support/**', 'app/**', 'tests/dummy/app/**'],
       parserOptions: {
         sourceType: 'script',
       },

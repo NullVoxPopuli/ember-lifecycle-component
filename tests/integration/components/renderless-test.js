@@ -15,8 +15,8 @@ module('Integration | Component | renderless', function(hooks) {
     this.owner.register(
       'component:foo',
       class Foo extends LifeCycleComponent {
-        constructor() {
-          super(...arguments);
+        constructor(...args) {
+          super(...args);
 
           assert.equal(this.args.foo, 2, 'constructor receives args');
         }
@@ -63,8 +63,8 @@ module('Integration | Component | renderless', function(hooks) {
       class Foo extends LifeCycleComponent {
         @service bar;
 
-        constructor() {
-          super(...arguments);
+        constructor(...args) {
+          super(...args);
 
           assert.equal(this.bar.bar, 2, 'Service value accessible');
         }
