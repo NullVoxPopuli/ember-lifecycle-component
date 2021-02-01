@@ -56,7 +56,6 @@ export default class ComponentManager<Component extends BaseComponent> {
 
     let meta = (Ember as any).meta(component);
 
-    meta.setSourceDestroying();
     setDestroying(component);
 
     schedule('actions', component, component.willDestroy);
@@ -68,13 +67,12 @@ export default class ComponentManager<Component extends BaseComponent> {
   }
 }
 
-function scheduledDestroyComponent(component: BaseComponent, meta: any) {
+function scheduledDestroyComponent(component: BaseComponent) {
   if (component.isDestroyed) {
     return;
   }
 
   (Ember as any).destroy(component);
 
-  meta.setSourceDestroyed();
   setDestroyed(component);
 }
