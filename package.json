@@ -20,7 +20,7 @@
     "lint:hbs": "ember-template-lint .",
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint . --cache",
-    "lint:types": "yarn tsc --noEmit",
+    "lint:types": "yarn tsc --noEmit --skipLibCheck",
     "lint:js:fix": "eslint . --fix",
     "start": "ember serve",
     "test": "npm-run-all lint test:*",
