@@ -1,6 +1,6 @@
 {
   "name": "ember-lifecycle-component",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A component with additional lifecycles for times when you may need need a template.",
   "keywords": [
     "ember-addon",
