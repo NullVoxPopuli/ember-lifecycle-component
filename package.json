@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^7.24.0",
-    "ember-cli-htmlbars": "^5.5.0",
+    "ember-cli-htmlbars": "^5.6.0",
     "ember-cli-typescript": "^4.1.0",
     "ember-template-lint": "^2.20.0",
     "eslint": "^7.20.0"
