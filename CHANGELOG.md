@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/NullVoxPopuli/ember-lifecycle-component/compare/v1.0.9...v1.0.10) (2021-02-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ember-cli-htmlbars to ^5.6.2 ([945a468](https://github.com/NullVoxPopuli/ember-lifecycle-component/commit/945a4688a0fcce96bbf079e30eaf36dbe9f19c7e))
+
 ## [1.0.9](https://github.com/NullVoxPopuli/ember-lifecycle-component/compare/v1.0.8...v1.0.9) (2021-02-26)
 
 
