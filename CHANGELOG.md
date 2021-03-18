@@ -1,3 +1,10 @@
+## [1.0.16](https://github.com/NullVoxPopuli/ember-lifecycle-component/compare/v1.0.15...v1.0.16) (2021-03-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ember-cli-babel to ^7.26.1 ([3be18e0](https://github.com/NullVoxPopuli/ember-lifecycle-component/commit/3be18e0905bdaa4b958b4b9f49789f467444294c))
+
 ## [1.0.15](https://github.com/NullVoxPopuli/ember-lifecycle-component/compare/v1.0.14...v1.0.15) (2021-03-18)
 
 
