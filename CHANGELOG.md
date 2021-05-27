@@ -1,3 +1,10 @@
+## [1.0.23](https://github.com/NullVoxPopuli/ember-lifecycle-component/compare/v1.0.22...v1.0.23) (2021-05-27)
+
+
+### Bug Fixes
+
+* **deps:** move lint deps to dev deps ([8a8a7f7](https://github.com/NullVoxPopuli/ember-lifecycle-component/commit/8a8a7f780c286947a9f4978b48c5acaa135005a6))
+
 ## [1.0.22](https://github.com/NullVoxPopuli/ember-lifecycle-component/compare/v1.0.21...v1.0.22) (2021-05-18)
 
 

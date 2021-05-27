@@ -1,6 +1,6 @@
 {
   "name": "ember-lifecycle-component",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "A component with additional lifecycles for times when you may need need a template.",
   "keywords": [
     "ember-addon",
@@ -70,9 +70,7 @@
     "ember-resolver": "^8.0.2",
     "ember-source": "~3.27.1",
     "ember-source-channel-url": "^3.0.0",
-    "ember-template-lint": "^3.4.2",
     "ember-try": "^1.4.0",
-    "eslint": "^7.27.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-ember": "^10.4.2",
     "eslint-plugin-node": "^11.1.0",
