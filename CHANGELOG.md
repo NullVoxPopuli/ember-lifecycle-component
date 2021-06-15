@@ -1,3 +1,10 @@
+## [1.0.24](https://github.com/NullVoxPopuli/ember-lifecycle-component/compare/v1.0.23...v1.0.24) (2021-06-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ember-cli-typescript to ^4.2.0 ([ce52598](https://github.com/NullVoxPopuli/ember-lifecycle-component/commit/ce52598657be80ce8e024c1bc6e0398bb732c1dd))
+
 ## [1.0.23](https://github.com/NullVoxPopuli/ember-lifecycle-component/compare/v1.0.22...v1.0.23) (2021-05-27)
 
 
