@@ -1,7 +1,7 @@
 # ember-lifecycle-component
 
 [![npm version](https://badge.fury.io/js/ember-lifecycle-component.svg)](https://badge.fury.io/js/ember-lifecycle-component)
-[![CI](https://github.com/NullVoxPopuli/ember-lifecycle-component/actions/workflows/tests.yml/badge.svg?branch=main&event=push)](https://github.com/NullVoxPopuli/ember-lifecycle-component/actions/workflows/tests.yml)
+[![CI](https://github.com/NullVoxPopuli/ember-lifecycle-component/actions/workflows/tests.yml/badge.svg?branch=master&event=push)](https://github.com/NullVoxPopuli/ember-lifecycle-component/actions/workflows/tests.yml)
 
 For situations where you don't need a template.
 - WebGL Integration
