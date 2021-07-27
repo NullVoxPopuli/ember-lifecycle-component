@@ -36,7 +36,7 @@
     "ember-cli-typescript": "^4.2.1"
   },
   "devDependencies": {
-    "ember-template-lint": "^3.5.0",
+    "ember-template-lint": "^3.5.1",
     "eslint": "^7.31.0",
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
