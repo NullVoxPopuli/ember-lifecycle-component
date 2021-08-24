@@ -8018,10 +8018,10 @@ eslint-config-prettier@^7.2.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-7.2.0.tgz#f4a4bd2832e810e8cc7c1411ec85b3e85c0c53f9"
   integrity sha512-rV4Qu0C3nfJKPOAhFujFxB7RMP+URFyQqqOZW9DMRD7ZDTFyjaIlETU3xzHELt++4ugC0+Jm084HQYkkJe+Ivg==
 
-eslint-plugin-ember@^10.5.3:
-  version "10.5.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-10.5.3.tgz#fc5bf5f6f4c66bd166060931f3c12fbb15f44c8a"
-  integrity sha512-73VoHoerrr81rk9gdeedcHwCXinJCEyMEHimXKtcFwr3lcMvE+yCkV/w0q8Eqj0Rpuo1ifLOU4S2OMptdNPhbA==
+eslint-plugin-ember@^10.5.4:
+  version "10.5.4"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-10.5.4.tgz#263a104b297b60d854640612fec9f2d071302e78"
+  integrity sha512-7Z6H47tD4MNFGN51j00YMKjsHjN1z4u8vA1uImSYrgYHLh5nZKyP8pFBFI8pXBicw96N/njH48iz4zjZqMcPlQ==
   dependencies:
     "@ember-data/rfc395-data" "^0.0.4"
     css-tree "^1.0.0-alpha.39"
