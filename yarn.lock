@@ -7023,10 +7023,10 @@ ember-cli-version-checker@^5.1.1, ember-cli-version-checker@^5.1.2:
     semver "^7.3.4"
     silent-error "^1.1.1"
 
-ember-cli@~3.28.0:
-  version "3.28.0"
-  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.28.0.tgz#0a0374c9a1d08386ddf56e8098a38b71dd4453bc"
-  integrity sha512-CrMs5edFQ2ingO2xfT33T4nUEl8SlvBQ7q+XO9L/GFTvFU07slHxYSvGur0cwgQfOiLnkSTnIaVF1oqBnEmfPQ==
+ember-cli@~3.28.6:
+  version "3.28.6"
+  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.28.6.tgz#477a6a134501639d6cb03da6746158501c41efce"
+  integrity sha512-aGHIDXM5KujhU+tHyfp1X5bUp3yj47sIWI0zgybyIw6vv6ErAu/eKWWMSib5PF8cQDdXG9vttBcXnvQ4QBNIPQ==
   dependencies:
     "@babel/core" "^7.13.8"
     "@babel/plugin-transform-modules-amd" "^7.12.1"
