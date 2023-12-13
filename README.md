@@ -1,3 +1,7 @@
+# Archived
+
+While this component is built on public APIs, I can no longer recommend it as it doesn't fit within the current meta for reactivity
+
 # ember-lifecycle-component
 
 [![npm version](https://badge.fury.io/js/ember-lifecycle-component.svg)](https://badge.fury.io/js/ember-lifecycle-component)
